@@ -35,7 +35,7 @@ Type the accessory IP address in a browser and press `HAP reset`
 
 Every `Twinkly` device added represent itself as a `LightBulb` HomeKit service in the accessory
 
-![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/tw-services.png =346x)
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/tw-services.png)
 
 ## Identification
 
@@ -60,7 +60,7 @@ $ mos flash
 
 Connect WiFi access point name `TWH-XXXX` password `twinklyhub`, select home network and save credentials
 
-![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/wifi-setup.gif) ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/twh.png =346x)
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/wifi-setup.gif) ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/twh.png)
 
 
 ## ToDo
