@@ -1,6 +1,6 @@
 # Twinkly HomeKit Hub for Mongoose OS
 
-Add your Twinkly Smart Lights to HomeKit smarthome infrastructure. Use `Siri` voice control and all the scripting potential from `Apple`
+Add your [Twinkly Smart Lights](http://twinkly.com) to HomeKit smarthome infrastructure. Use `Siri` voice control and all the scripting potential from `Apple`
 
 ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/adding.gif)
 
