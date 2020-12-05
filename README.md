@@ -2,7 +2,7 @@
 
 Add your Twinkly Smart Lights to HomeKit smarthome infrastructure. Use `Siri` voice control and all the scripting potential from `Apple`
 
-![](https://github.com/mongoose-os-apps/twinkly-homekit/blob/master/docs/adding.gif)
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/adding.gif)
 
 ## Supported platforms
 
@@ -19,13 +19,13 @@ Add your Twinkly Smart Lights to HomeKit smarthome infrastructure. Use `Siri` vo
 
 Type the accessory IP address in a browser, select desired device and press `Add`
 
-![](https://github.com/mongoose-os-apps/twinkly-homekit/blob/master/docs/tw-adding.gif)
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/tw-adding.gif)
 
 ## Removing Twinkly device from a hub
 
 Type the accessory IP address in a browser, select desired device and press `❌`
 
-![](https://github.com/mongoose-os-apps/twinkly-homekit/blob/master/docs/tw-removing.gif)
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/tw-removing.gif)
 
 ## HomeKit accessory reset
 
@@ -35,7 +35,7 @@ Type the accessory IP address in a browser and press `HAP reset`
 
 Every `Twinkly` device added represent itself as a `LightBulb` HomeKit service in the accessory
 
-![](https://github.com/mongoose-os-apps/twinkly-homekit/blob/master/docs/tw-services.png)
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/tw-services.png)
 
 ## Identification
 
@@ -60,7 +60,8 @@ $ mos flash
 
 Connect WiFi access point name `TWH-XXXX` password `twinklyhub`, select home network and save credentials
 
-![](https://github.com/mongoose-os-apps/twinkly-homekit/blob/master/docs/wifi-setup.gif)
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/wifi-setup.gif) ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/twh.png)
+
 
 ## ToDo
 
