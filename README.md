@@ -62,8 +62,9 @@ Connect WiFi access point name `TWH-XXXX` password `twinklyhub`, select home net
 
 ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/wifi-setup.gif) ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/twh.png)
 
-
 ## ToDo
+
+* Button driven factory reset
 
 ## Copyrights
 
