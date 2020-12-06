@@ -6,6 +6,7 @@ Add your [Twinkly Smart Lights](http://twinkly.com) to HomeKit smarthome infrast
 
 ## Supported platforms
 
+* `ESP8266`
 * `ESP32`
 
 ## Dependencies 

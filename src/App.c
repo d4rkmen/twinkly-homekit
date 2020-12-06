@@ -194,7 +194,7 @@ HAP_RESULT_USE_CHECK
 HAPError HandleLightBulbBrightnessRead(
         HAPAccessoryServerRef* server HAP_UNUSED,
         const HAPIntCharacteristicReadRequest* request HAP_UNUSED,
-        int* value,
+        int32_t* value,
         void* _Nullable context HAP_UNUSED) {
     int index = request->characteristic->iid >> 16;
     *value = accessoryConfiguration.state.tw_state[index].brightness;
@@ -207,7 +207,7 @@ HAP_RESULT_USE_CHECK
 HAPError HandleLightBulbBrightnessWrite(
         HAPAccessoryServerRef* server,
         const HAPIntCharacteristicWriteRequest* request,
-        int value,
+        int32_t value,
         void* _Nullable context HAP_UNUSED) {
     HAPLogInfo(&kHAPLog_Default, "%s: %ld", __func__, (long) value);
     int index = request->characteristic->iid >> 16;

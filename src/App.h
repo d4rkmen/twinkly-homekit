@@ -55,7 +55,7 @@ HAP_RESULT_USE_CHECK
 HAPError HandleLightBulbBrightnessRead(
         HAPAccessoryServerRef* server HAP_UNUSED,
         const HAPIntCharacteristicReadRequest* request HAP_UNUSED,
-        int* value,
+        int32_t* value,
         void* _Nullable context HAP_UNUSED);
 
 /**
@@ -65,7 +65,7 @@ HAP_RESULT_USE_CHECK
 HAPError HandleLightBulbBrightnessWrite(
         HAPAccessoryServerRef* server,
         const HAPIntCharacteristicWriteRequest* request,
-        int value,
+        int32_t value,
         void* _Nullable context HAP_UNUSED);
 
 /**

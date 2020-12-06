@@ -33,11 +33,6 @@ build_vars:
   # Enables storing setup info in the config and a simple RPC service to configure it.
   MGOS_HAP_SIMPLE_CONFIG: 1
   UDP_DEBUG: 0
-  # MDNS packets drop fix
-  ESP_IDF_SDKCONFIG_OPTS: >
-    ${build_vars.ESP_IDF_SDKCONFIG_OPTS}
-    CONFIG_LWIP_UDP_RECVMBOX_SIZE=64
-  
   
 config_schema:
   - ["app", "o", {title: "User app config"}]
@@ -86,6 +81,11 @@ conds:
         - ["pins.button", 0]
       libs:
         - origin: https://github.com/mongoose-os-libs/wifi
+      build_vars:
+        # MDNS packets drop fix
+        ESP_IDF_SDKCONFIG_OPTS: >
+          ${build_vars.ESP_IDF_SDKCONFIG_OPTS}
+          CONFIG_LWIP_UDP_RECVMBOX_SIZE=64
 
   - when: mos.platform == "esp8266"
     apply:
