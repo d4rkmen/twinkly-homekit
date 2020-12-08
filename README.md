@@ -28,6 +28,12 @@ Type the accessory IP address in a browser, select desired device and press `❌
 
 ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/tw-removing.gif)
 
+## Manual ON / OFF
+
+Manual control is supported by Web GUI. This way You can another emergency control channel.
+
+![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/onoff.gif)
+
 ## HomeKit accessory reset
 
 Type the accessory IP address in a browser and press `HAP reset`
