@@ -51,7 +51,7 @@ config_schema:
   
 libs:
   - origin: https://github.com/mongoose-os-libs/http-server
-  - origin: https://github.com/d4rkmen/dns-sd
+  # - origin: https://github.com/d4rkmen/dns-sd
   - origin: https://github.com/mongoose-os-libs/homekit-adk
     version: master
   - origin: https://github.com/mongoose-os-libs/rpc-service-config
