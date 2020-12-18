@@ -23,6 +23,7 @@
 #include "mgos_dns_sd.h"
 #include "mgos_hap.h"
 #include "mgos_twinkly.h"
+#include "reset_btn.h"
 
 static bool requestedFactoryReset = false;
 static bool clearPairings = false;
@@ -254,6 +255,8 @@ static void InitializeBLE() {
 #endif
 
 enum mgos_app_init_result mgos_app_init(void) {
+    /* Reset button */
+    mgos_twinkly_reset_button_init();
     /* LED */
     mgos_gpio_set_mode(mgos_sys_config_get_pins_led(), MGOS_GPIO_MODE_OUTPUT);
     mgos_gpio_write(mgos_sys_config_get_pins_led(), LED_OFF);
