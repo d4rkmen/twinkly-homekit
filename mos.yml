@@ -99,5 +99,7 @@ conds:
         - ["pins.button", 0]
       libs:
         - origin: https://github.com/mongoose-os-libs/wifi
+      cdefs:
+          DEFAULT_UDP_MBOX_SIZE: 64
 
 manifest_version: 2017-05-18
