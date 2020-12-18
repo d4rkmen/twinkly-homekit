@@ -26,7 +26,8 @@ extern HAPStringCharacteristic lightBulbNameCharacteristic;
 extern HAPBoolCharacteristic lightBulbOnCharacteristic;
 extern HAPIntCharacteristic lightBulbBrightnessCharacteristic;
 
-#define kIID_PoolSize ((uint64_t) 0x010000)
+#define kIID_PoolBitsize 16
+#define kIID_PoolSize ((uint64_t) 1 << kIID_PoolBitsize)
 
 #if __has_feature(nullability)
 #pragma clang assume_nonnull end

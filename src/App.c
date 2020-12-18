@@ -162,7 +162,7 @@ HAPError HandleLightBulbOnRead(
         const HAPBoolCharacteristicReadRequest* request HAP_UNUSED,
         bool* value,
         void* _Nullable context HAP_UNUSED) {
-    int index = request->characteristic->iid >> 16;
+    int index = request->characteristic->iid >> kIID_PoolBitsize;
     *value = accessoryConfiguration.state.tw_state[index].on;
     HAPLogInfo(&kHAPLog_Default, "%s: %s", __func__, *value ? "true" : "false");
 
@@ -176,7 +176,7 @@ HAPError HandleLightBulbOnWrite(
         bool value,
         void* _Nullable context HAP_UNUSED) {
     HAPLogInfo(&kHAPLog_Default, "%s: %s", __func__, value ? "true" : "false");
-    int index = request->characteristic->iid >> 16;
+    int index = request->characteristic->iid >> kIID_PoolBitsize;
     if (accessoryConfiguration.state.tw_state[index].on != value) {
         accessoryConfiguration.state.tw_state[index].on = value;
 
@@ -196,7 +196,7 @@ HAPError HandleLightBulbBrightnessRead(
         const HAPIntCharacteristicReadRequest* request HAP_UNUSED,
         int32_t* value,
         void* _Nullable context HAP_UNUSED) {
-    int index = request->characteristic->iid >> 16;
+    int index = request->characteristic->iid >> kIID_PoolBitsize;
     *value = accessoryConfiguration.state.tw_state[index].brightness;
     HAPLogInfo(&kHAPLog_Default, "%s: %ld", __func__, (long) *value);
 
@@ -210,7 +210,7 @@ HAPError HandleLightBulbBrightnessWrite(
         int32_t value,
         void* _Nullable context HAP_UNUSED) {
     HAPLogInfo(&kHAPLog_Default, "%s: %ld", __func__, (long) value);
-    int index = request->characteristic->iid >> 16;
+    int index = request->characteristic->iid >> kIID_PoolBitsize;
 
     if (accessoryConfiguration.state.tw_state[index].brightness != value) {
         accessoryConfiguration.state.tw_state[index].brightness = value;
