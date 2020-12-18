@@ -86,14 +86,6 @@ static void timer_cb(void* arg) {
     (void) arg;
 }
 
-static void adv_timer_cb(void* arg) {
-    if (!HAPAccessoryServerIsPaired(HAPNonnull(&accessoryServer))) {
-        LOG(LL_DEBUG, ("Advertising accessory"));
-        mgos_dns_sd_advertise();
-    }
-    (void) arg;
-}
-
 /**
  * Initialize global platform objects.
  */
@@ -316,10 +308,6 @@ enum mgos_app_init_result mgos_app_init(void) {
 
     // Start accessory server for App.
     if (mgos_hap_config_valid()) {
-        #if CS_PLATFORM == CS_P_ESP8266
-        // MDNS lost queries workaround
-        mgos_set_timer(2000, MGOS_TIMER_REPEAT, adv_timer_cb, NULL);
-        #endif
         AppAccessoryServerStart();
     } else {
         LOG(LL_INFO, ("=== Accessory is not provisioned"));
