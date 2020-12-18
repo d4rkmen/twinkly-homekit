@@ -7,8 +7,6 @@
 #ifndef APP_H
 #define APP_H
 
-#include "common/platform.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -106,14 +104,8 @@ void RestorePlatformFactorySettings(void);
 HAPAccessory* AppGetAccessoryInfo();
 
 // LED
-#if CS_PLATFORM == CS_P_ESP32
-#define LED_ON  true
-#define LED_OFF false
-#endif
-#if CS_PLATFORM == CS_P_ESP8266
-#define LED_ON  false
-#define LED_OFF true
-#endif
+#define LED_ON  mgos_sys_config_get_pins_led_active_high()
+#define LED_OFF !mgos_sys_config_get_pins_led_active_high()
 
 void twinkly_cb(int ev, void* ev_data, void* arg);
 
