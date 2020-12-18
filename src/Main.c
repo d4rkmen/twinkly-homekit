@@ -161,10 +161,6 @@ void RestorePlatformFactorySettings(void) {
  */
 void HandleUpdatedState(HAPAccessoryServerRef* _Nonnull server, void* _Nullable context) {
     LOG(LL_INFO, ("%s %ld", __func__, (long) HAPAccessoryServerGetState(server)));
-    // if (requestedServerRestart) {
-    //     requestedServerRestart = false;
-    //     AppAccessoryServerStart();
-    // } else
     if (HAPAccessoryServerGetState(server) == kHAPAccessoryServerState_Idle && requestedFactoryReset) {
         HAPPrecondition(server);
 
@@ -266,15 +262,6 @@ enum mgos_app_init_result mgos_app_init(void) {
         LOG(LL_WARN, ("Runing captive portal to setup WiFi"));
         return MGOS_APP_INIT_SUCCESS;
     };
-    //   if (!mgos_sys_config_get_mel_ac_enable()) {
-    //     LOG(LL_INFO, ("Updating config..."));
-    //     /* Config */
-    //     mgos_sys_config_set_debug_stdout_uart(-1);
-    //     mgos_sys_config_set_debug_stderr_uart(-1);
-    //     mgos_sys_config_set_mel_ac_enable(true);
-    //     mgos_sys_config_save(&mgos_sys_config, false, NULL);
-    //     mgos_system_restart();  // Its better to restart
-    //   }
     LOG(LL_INFO, ("Starting services..."));
     /* Twinkly events */
     mgos_event_add_group_handler(MGOS_EVENT_GRP_TWINKLY, twinkly_cb, NULL);
