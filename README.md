@@ -69,9 +69,17 @@ Connect WiFi access point name `TWH-XXXX` password `twinklyhub`, select home net
 
 ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/wifi-setup.gif) ![](https://github.com/d4rkmen/twinkly-homekit/blob/master/docs/twh.png)
 
-## ToDo
+## Factory reset
 
-* Button driven factory reset
+Hold a button for factory reset. This will remove WiFi settings, HAP server status, Twinkly devices list.
+
+Configuration:
+
+```yml
+  - ["pins.button", "i", -1, {title: "Button GPIO pin"}]
+  - ["pins.button_hold_ms", "i", 5000, {title: "Button hold time for reset"}]
+  - ["pins.button_pull_up", "b", true, {title: "Button pull up or down"}]
+```
 
 ## Copyrights
 
