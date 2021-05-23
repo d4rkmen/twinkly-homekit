@@ -53,6 +53,7 @@ Build in LED blinks during the identification
 * LED blink on `twinkly` library init
 * LED blink on `twinkly` device changes
 * LED blink on `HAP` going to update `twinkly` device
+* LED blinking continous on connection lost / (re)connecting
 
 ## Setup
 

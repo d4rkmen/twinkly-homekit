@@ -1,6 +1,6 @@
 author: 'd4rkmen'
 description: Twinkly HomeKit Hub for Mongoose OS
-version: 1.0.3
+version: 1.0.4
 
 libs_version: ${mos.version}
 modules_version: ${mos.version}
